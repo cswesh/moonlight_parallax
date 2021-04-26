@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Moonlight effect Parallax</title>
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">Logo</a>
+        <ul>
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Work</a></li>
+            <li><a href="#">Contact us</a></li>
+        </ul>
+    </header>
+    <section>
+        <img src="images/stars.png" id="stars" alt="">
+        <img src="images/moon.png" id="moon" alt="">
+        <img src="images/mountains_behind.png" id="mountains_behind" alt="">
+        <h2 id="text">Moon Light</h2>
+        <a href="#" id="btn">Explore</a>
+        <img src="images/mountains_front.png" id="mountains_front" alt="">
+    </section>
+    <div class="sec" id="sec">
+        <h2>Parallax Scrolling Effects</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur voluptatibus et inventore consectetur ipsum voluptate nemo, possimus deleniti ratione eos quam quasi necessitatibus quisquam maxime corporis dignissimos, cum nam aliquam id, minus asperiores delectus magni accusantium dicta. Magnam provident esse, harum corrupti maxime a sapiente est officiis! Voluptatem, enim optio. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam, cupiditate aspernatur. Nam quia esse a non accusamus saepe quam? Cupiditate nihil nam quibusdam veritatis maiores perspiciatis distinctio libero laboriosam quis! Ad, cum, assumenda, illo quia officia recusandae rem quibusdam magnam praesentium soluta perspiciatis. Numquam atque, eius temporibus vel nemo sunt. <br><br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero aliquam illo placeat veritatis sint sapiente, assumenda esse nisi, quia vel commodi praesentium dolores omnis non laboriosam libero exercitationem culpa. Vel quidem provident odit animi, totam commodi incidunt repellendus aspernatur excepturi enim. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia quod praesentium vitae quae sit inventore voluptates repudiandae. Libero odit, quidem fuga quas eveniet non asperiores quasi eaque molestiae ex perferendis! <br><br> Odit excepturi, culpa doloremque asperiores ducimus quibusdam libero nobis optio earum repellat minus nostrum nisi laboriosam debitis ullam numquam fugit suscipit amet tempora a saepe adipisci veniam nulla ipsam. Voluptatem aliquid dolorum doloribus tenetur rerum quod itaque eveniet accusantium id libero dicta, accusamus quaerat iste odit officiis illo ullam perferendis recusandae! Explicabo veritatis, omnis neque ullam sed id nobis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet non magni facilis suscipit fugit, sit dicta veritatis natus earum asperiores?</p>
+    </div>
+
+    <script>
+        let stars = document.getElementById('stars');
+        let moon = document.getElementById('moon');
+        let mountains_behind = document.getElementById('mountains_behind');
+        let text = document.getElementById('text');
+        let btn = document.getElementById('btn');
+        let mountains_front = document.getElementById('mountains_front');
+        let header = document.querySelector('header');
+
+        window.addEventListener('scroll', function(){
+            let value = window.scrollY;
+            stars.style.left = value * 0.25 + 'px';
+            moon.style.top = value * 1.05 + 'px';
+            mountains_behind.style.top = value * 0.5 + 'px';
+            mountains_front.style.top = value * 0 + 'px';
+            text.style.marginRight = value * 4 + 'px';
+            text.style.marginTop = value * 1.5 + 'px';
+            btn.style.marginTop = value * 1.5 + 'px';
+            header.style.top = value * 0.5 +'px';
+        })
+
+
+    </script>
+</body>
+</html>
